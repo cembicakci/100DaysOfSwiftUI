@@ -11,6 +11,7 @@
 		E5AEAB792A766581008BDE43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AEAB782A766581008BDE43 /* ContentView.swift */; };
 		E5AEAB7B2A766583008BDE43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5AEAB7A2A766583008BDE43 /* Assets.xcassets */; };
 		E5AEAB7E2A766583008BDE43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5AEAB7D2A766583008BDE43 /* Preview Assets.xcassets */; };
+		E5AEAB862A76A3A9008BDE43 /* wesplit.gif in Resources */ = {isa = PBXBuildFile; fileRef = E5AEAB852A76A3A9008BDE43 /* wesplit.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		E5AEAB782A766581008BDE43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5AEAB7A2A766583008BDE43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5AEAB7D2A766583008BDE43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5AEAB842A76A36A008BDE43 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E5AEAB852A76A3A9008BDE43 /* wesplit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wesplit.gif; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,8 @@
 		E5AEAB6A2A766581008BDE43 = {
 			isa = PBXGroup;
 			children = (
+				E5AEAB842A76A36A008BDE43 /* README.md */,
+				E5AEAB852A76A3A9008BDE43 /* wesplit.gif */,
 				E5AEAB752A766581008BDE43 /* WeSplit */,
 				E5AEAB742A766581008BDE43 /* Products */,
 			);
@@ -126,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5AEAB7E2A766583008BDE43 /* Preview Assets.xcassets in Resources */,
+				E5AEAB862A76A3A9008BDE43 /* wesplit.gif in Resources */,
 				E5AEAB7B2A766583008BDE43 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
