@@ -16,6 +16,8 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var score = 0
+    
     var body: some View {
         NavigationView {
             List {
@@ -23,7 +25,7 @@ struct ContentView: View {
                     TextField("Enter your word", text: $newWord)
                         .autocapitalization(.none)
                 }
-                
+                                
                 Section {
                     ForEach(usedWords, id:\.self) { word in
                         HStack {
@@ -32,6 +34,9 @@ struct ContentView: View {
                         }
                     }
                 }
+                
+                Text("Your Score: \(score)")
+                
             }
             .navigationTitle(rootWord)
             .onSubmit(addNewWord)
@@ -41,12 +46,22 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                    Button("Start Game", action: startGame)
+            }
         }
+        
     }
     
     func addNewWord(){
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        
         guard answer.count > 0 else { return }
+        
+        guard answer.count > 2 else {
+            wordError(title: "Warning", message: "Your word must be at least 3 character!")
+            return
+        }
         
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original!")
@@ -60,16 +75,23 @@ struct ContentView: View {
         
         guard isReal(word: answer) else {
             wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
+            score = score - answer.count * 3
             return
         }
         
         withAnimation {
             usedWords.insert(answer, at: 0)
+            
+            score = score + answer.count * 3
         }
         newWord = ""
     }
     
     func startGame(){
+        usedWords.removeAll()
+        score = 0
+        newWord = ""
+        
         //converting txt file
         if let startWordsUrl = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsUrl) {
