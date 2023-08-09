@@ -7,163 +7,140 @@
 
 import SwiftUI
 
-struct CustomColor {
-    static let peach = Color("peach")
-}
-
 struct ContentView: View {
-    @State private var settingsMode = true
+    @State private var settingMode = true
     @State private var gameMode = false
-    @State private var scoreMode = false
     
-    @State private var questions = [5, 10, 20]
-    @State private var questionSelection = 1
-    @State private var questionsAsked = 0
+    @State private var multiplacationTable = 2
+    @State private var howManyQuestion = 0
     
-    @State private var multiplicationTable = 2
     @State private var randomNumber = Int.random(in: 0...12)
     @State private var correctAnswer = 0
-    @State private var guess = 0
     
+    @State private var answer = 0
+    @State private var count = 0
     @State private var score = 0
     
+    @State private var gameOver = false
+    
+    let questions = [5, 10, 20]
+    
     var body: some View {
+      
         NavigationView {
+            
             ZStack {
-                
-                //  Settings
                 VStack {
-                    Stepper(value: $multiplicationTable, in: 2...12, step: 1) {
-                        Text("Multiplication table: \(multiplicationTable)")
-                    }
                     
-                    Section {
-                        Picker("How many questions?", selection: $questionSelection) {
-                            ForEach(0..<questions.count, id: \.self) {
-                                Text("\(self.questions[$0])")
-                            }
-                        }
-                        .pickerStyle(.segmented)
-                    } header: {
-                        HStack {
-                            Text("How many questions?")
-                            Spacer()
-                        }
-                    }
-                    
-                    Button {
-                        withAnimation(
-                            .easeInOut(duration: 0.8)
-                            .delay(0.6)
-                        ) {
-                            startGame()
-                        }
-                    } label: {
-                        Text("Start multiplying")
-                            .frame(maxWidth: .infinity)
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.primary)
-                }
-                .frame(maxHeight: gameMode ? 0 : .infinity)
-                .opacity(settingsMode ? 1 : 0) //   1 : 0
-                
-                Spacer()
-                
-                //  Game mode
-                VStack {
                     Form {
-                        Text("What is \(randomNumber) x \(multiplicationTable)?")
-                        
-                        Section("Your guess") {
-                            TextField("", value: $guess, format: .number)
-                                .keyboardType(.decimalPad)
+                        Section {
+                            Stepper(value: $multiplacationTable, in: 2...12, step: 1) {
+                                Text("\(multiplacationTable)")
+                            }
+                        } header: {
+                            Text("Multiplication Table")
                         }
-                    }
-                    .frame(maxHeight: 220)
-                    
-                    Button {
-                        checkGuess()
-                    } label: {
-                        Text("Check")
-                            .frame(maxWidth: .infinity)
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.primary)
-                    
-                    Text("Score: \(score)")
-                }
-                .opacity(gameMode ? 1 : 0) //   1 : 0
-                
-                // Score card
-                VStack() {
-                    Text("Final score")
-                        .font(.title)
-                    Text("\(score)")
-                        .font(.system(size: 96))
-                    
-                    Text("Congratulations!")
-                        .foregroundColor(.secondary)
-                    
-                    Button {
-                        settingsMode = true
-                        scoreMode = false
-                        score = 0
-                        guess = 0
-                    } label: {
-                        Text("Restart game")
-                    }
                         
+                        Section {
+                            Picker("Select?", selection: $howManyQuestion) {
+                                ForEach(0..<questions.count, id: \.self) {
+                                    Text("\(self.questions[$0])")
+                                }
+                            }
+                            .pickerStyle(.segmented)
+                        } header: {
+                            Text("How many question?")
+                        }
+                                            
+                    }
+                    .frame(maxHeight: 250)
+                    .navigationTitle("Edutainment")
+                    
+                    Button {
+                        startGame()
+                    } label: {
+                        Text("Start")
+                    }
+                    
+                  
+                                
                 }
-                .padding(20)
-                .frame(maxWidth: .infinity)
-                .background(CustomColor.peach)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .opacity(scoreMode ? 1 : 0)
+                .opacity(settingMode ? 1 : 0)
                 
+                
+                VStack {
+                                        
+                    Form {
+                        Text("What is \(multiplacationTable) x \(randomNumber) ?")
+                        
+                        Section {
+                            TextField ("", value: $answer, format: .number)
+                        } header: {
+                            Text("Your answer")
+                        }
+                        
+                    }
+                    .frame(maxHeight: 250)
+                    
+                    Button {
+                        checkResult()
+                    } label: {
+                        Text("Answer")
+                    }
+                    
+                }
+                .opacity(gameMode ? 1 : 0)
+                .alert("Game over", isPresented: $gameOver) {
+                    Button("Restart"){
+                        restartGame()
+                    }
+                } message: {
+                    Text("Your Score is \(score)")
+                }
             }
-            .padding(20)
-            .navigationTitle("Multiply Game")
         }
+        
     }
     
-    func startGame() {
-        //  Start game switches on gameMode
-        settingsMode = false
+    func startGame(){
+        settingMode = false
         gameMode = true
         
-        questionsAsked = 1
-        correctAnswer = randomNumber * multiplicationTable
+        count = count + 1
+        correctAnswer = randomNumber * multiplacationTable
     }
     
-    func checkGuess() {
-        if questionsAsked < questions[questionSelection] {
-            if guess == correctAnswer {
-                score += 1
+    func checkResult(){
+        if(count < questions[howManyQuestion]){
+            if(answer == correctAnswer){
+                print("111")
+                score = score + 10
             } else {
-                score -= 1
+                score = score - 10
             }
             
             randomNumber = Int.random(in: 0...12)
-            correctAnswer = randomNumber * multiplicationTable
-            
-            questionsAsked += 1
-            guess = 0
+            correctAnswer = randomNumber * multiplacationTable
+            count = count + 1
+            answer = 0
         } else {
-            if guess == correctAnswer {
-                score += 1
+            if(answer == correctAnswer){
+                print("222")
+                score = score + 10
             } else {
-                score -= 1
+                score = score - 10
             }
-            showScoreCard()
+            
+            gameOver = true
         }
     }
     
-    func showScoreCard() {
+    func restartGame(){
+        settingMode = true
         gameMode = false
-        scoreMode = true
-        
-        //  Let user restart game
+        score = 0
+        answer = 0
+        count = 0
     }
 }
 
