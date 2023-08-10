@@ -38,7 +38,7 @@ struct ContentView: View {
                                 Text("\(multiplacationTable)")
                             }
                         } header: {
-                            Text("Multiplication Table")
+                            Text("Multıplıcatıon Table")
                         }
                         
                         Section {
@@ -49,7 +49,7 @@ struct ContentView: View {
                             }
                             .pickerStyle(.segmented)
                         } header: {
-                            Text("How many question?")
+                            Text("How many questıon?")
                         }
                                             
                     }
@@ -113,7 +113,6 @@ struct ContentView: View {
     func checkResult(){
         if(count < questions[howManyQuestion]){
             if(answer == correctAnswer){
-                print("111")
                 score = score + 10
             } else {
                 score = score - 10
@@ -125,7 +124,6 @@ struct ContentView: View {
             answer = 0
         } else {
             if(answer == correctAnswer){
-                print("222")
                 score = score + 10
             } else {
                 score = score - 10
