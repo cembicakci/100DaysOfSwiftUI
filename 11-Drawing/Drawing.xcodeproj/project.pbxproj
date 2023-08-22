@@ -11,6 +11,7 @@
 		E5CF3E4B2A922CA0002E57CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF3E4A2A922CA0002E57CD /* ContentView.swift */; };
 		E5CF3E4D2A922CA1002E57CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CF3E4C2A922CA1002E57CD /* Assets.xcassets */; };
 		E5CF3E502A922CA1002E57CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CF3E4F2A922CA1002E57CD /* Preview Assets.xcassets */; };
+		E5CF3E5D2A93D72E002E57CD /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF3E5C2A93D72E002E57CD /* ContentView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E5CF3E4A2A922CA0002E57CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5CF3E4C2A922CA1002E57CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5CF3E4F2A922CA1002E57CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5CF3E5C2A93D72E002E57CD /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E5CF3E482A922CA0002E57CD /* DrawingApp.swift */,
 				E5CF3E4A2A922CA0002E57CD /* ContentView.swift */,
+				E5CF3E5C2A93D72E002E57CD /* ContentView2.swift */,
 				E5CF3E4C2A922CA1002E57CD /* Assets.xcassets */,
 				E5CF3E4E2A922CA1002E57CD /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CF3E5D2A93D72E002E57CD /* ContentView2.swift in Sources */,
 				E5CF3E4B2A922CA0002E57CD /* ContentView.swift in Sources */,
 				E5CF3E492A922CA0002E57CD /* DrawingApp.swift in Sources */,
 			);
