@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5761BEE2A9677B900365A93 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5761BED2A9677B900365A93 /* Activity.swift */; };
+		E5761BF02A96786000365A93 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5761BEF2A96786000365A93 /* Activities.swift */; };
 		E5CF3E6B2A9525D8002E57CD /* HabitoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF3E6A2A9525D8002E57CD /* HabitoAppApp.swift */; };
 		E5CF3E6D2A9525D8002E57CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF3E6C2A9525D8002E57CD /* ContentView.swift */; };
 		E5CF3E6F2A9525DA002E57CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CF3E6E2A9525DA002E57CD /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5761BED2A9677B900365A93 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		E5761BEF2A96786000365A93 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		E5CF3E672A9525D8002E57CD /* HabitoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CF3E6A2A9525D8002E57CD /* HabitoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitoAppApp.swift; sourceTree = "<group>"; };
 		E5CF3E6C2A9525D8002E57CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			children = (
 				E5CF3E6A2A9525D8002E57CD /* HabitoAppApp.swift */,
 				E5CF3E6C2A9525D8002E57CD /* ContentView.swift */,
+				E5761BED2A9677B900365A93 /* Activity.swift */,
+				E5761BEF2A96786000365A93 /* Activities.swift */,
 				E5CF3E6E2A9525DA002E57CD /* Assets.xcassets */,
 				E5CF3E702A9525DA002E57CD /* Preview Content */,
 			);
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5761BF02A96786000365A93 /* Activities.swift in Sources */,
+				E5761BEE2A9677B900365A93 /* Activity.swift in Sources */,
 				E5CF3E6D2A9525D8002E57CD /* ContentView.swift in Sources */,
 				E5CF3E6B2A9525D8002E57CD /* HabitoAppApp.swift in Sources */,
 			);
