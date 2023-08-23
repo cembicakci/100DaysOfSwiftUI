@@ -16,12 +16,17 @@ struct ContentView: View {
         NavigationView {
             List (data.activities) { activity in
                 NavigationLink {
-                    Text("Detail View")
+                    ActivityView(data: data, activity: activity)
                 } label: {
                     HStack {
                         Text(activity.title)
                         Spacer()
                         Text(String(activity.completionCount))
+                            .font(.caption.weight(.black))
+                            .padding(5)
+                            .frame(minWidth: 50)
+                            .background(color(for: activity))
+                            .clipShape(Capsule())
                     }
                 }
             }
@@ -36,6 +41,21 @@ struct ContentView: View {
             .sheet(isPresented: $addingNewActivity) {
                 AddActivity(data: data)
             }
+        }
+    }
+    
+    
+    func color(for activity: Activity) -> Color {
+        if activity.completionCount < 3 {
+            return .red
+        } else if activity.completionCount < 10 {
+            return .orange
+        } else if activity.completionCount < 20 {
+            return .green
+        } else if activity.completionCount < 50 {
+            return .blue
+        } else {
+            return .indigo
         }
     }
 }
