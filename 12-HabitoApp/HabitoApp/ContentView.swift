@@ -14,21 +14,24 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List (data.activities) { activity in
-                NavigationLink {
-                    ActivityView(data: data, activity: activity)
-                } label: {
-                    HStack {
-                        Text(activity.title)
-                        Spacer()
-                        Text(String(activity.completionCount))
-                            .font(.caption.weight(.black))
-                            .padding(5)
-                            .frame(minWidth: 50)
-                            .background(color(for: activity))
-                            .clipShape(Capsule())
+            List {
+                ForEach(data.activities) { activity in
+                    NavigationLink {
+                        ActivityView(data: data, activity: activity)
+                    } label: {
+                        HStack {
+                            Text(activity.title)
+                            Spacer()
+                            Text(String(activity.completionCount))
+                                .font(.caption.weight(.black))
+                                .padding(5)
+                                .frame(minWidth: 50)
+                                .background(color(for: activity))
+                                .clipShape(Capsule())
+                        }
                     }
                 }
+                .onDelete(perform: deleteActivity)
             }
             .navigationTitle("Habito")
             .toolbar {
@@ -57,6 +60,10 @@ struct ContentView: View {
         } else {
             return .indigo
         }
+    }
+    
+    func deleteActivity(at offsets: IndexSet) {
+        data.activities.remove(atOffsets: offsets)
     }
 }
 
