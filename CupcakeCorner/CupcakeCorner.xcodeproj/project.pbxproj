@@ -12,6 +12,8 @@
 		E5C545C72A991580005DD442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C545C62A991580005DD442 /* Assets.xcassets */; };
 		E5C545CA2A991580005DD442 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C545C92A991580005DD442 /* Preview Assets.xcassets */; };
 		E5C545D12A9A529F005DD442 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C545D02A9A529F005DD442 /* Order.swift */; };
+		E5C545D32A9A5651005DD442 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C545D22A9A5651005DD442 /* AddressView.swift */; };
+		E5C545D52A9A5E62005DD442 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C545D42A9A5E62005DD442 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		E5C545C62A991580005DD442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5C545C92A991580005DD442 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5C545D02A9A529F005DD442 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		E5C545D22A9A5651005DD442 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		E5C545D42A9A5E62005DD442 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			children = (
 				E5C545C22A99157F005DD442 /* CupcakeCornerApp.swift */,
 				E5C545C42A99157F005DD442 /* ContentView.swift */,
+				E5C545D42A9A5E62005DD442 /* CheckoutView.swift */,
+				E5C545D22A9A5651005DD442 /* AddressView.swift */,
 				E5C545D02A9A529F005DD442 /* Order.swift */,
 				E5C545C62A991580005DD442 /* Assets.xcassets */,
 				E5C545C82A991580005DD442 /* Preview Content */,
@@ -141,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5C545D12A9A529F005DD442 /* Order.swift in Sources */,
+				E5C545D32A9A5651005DD442 /* AddressView.swift in Sources */,
+				E5C545D52A9A5E62005DD442 /* CheckoutView.swift in Sources */,
 				E5C545C52A99157F005DD442 /* ContentView.swift in Sources */,
 				E5C545C32A99157F005DD442 /* CupcakeCornerApp.swift in Sources */,
 			);
