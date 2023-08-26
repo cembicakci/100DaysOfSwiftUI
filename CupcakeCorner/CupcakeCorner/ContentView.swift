@@ -8,20 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var order = Order()
     
     var body: some View {
-        AsyncImage(url: URL(string: "https://hws.dev/img/logo.png")) { phase in
-            if let image = phase.image {
-                image
-                    .resizable()
-                    .scaledToFit()
-            } else if phase.error != nil {
-                Text("There was an error loaging image")
-            } else {
-                ProgressView()
+        NavigationView {
+            Form {
+                Section {
+                    Picker("Select your cake type", selection: $order.type) {
+                        ForEach(Order.types.indices) {
+                            Text(Order.types[$0])
+                        }
+                    }
+                    Stepper("Number of cakes: \(order.quantity)", value: $order.quantity, in: 3...30)
+                }
+                
+                Section {
+                    Toggle("Any special requests", isOn: $order.specialRequestEnabled.animation())
+                    
+                    if order.specialRequestEnabled {
+                        Toggle("Add extra frosting", isOn: $order.extraFrosting.animation())
+                        Toggle("Add extra sprinkles", isOn: $order.addSprinkles.animation())
+                    }
+                }
             }
+            .navigationTitle("Cupcake Corner")
         }
-        .frame(width: 200, height: 200)
     }
     
 }
