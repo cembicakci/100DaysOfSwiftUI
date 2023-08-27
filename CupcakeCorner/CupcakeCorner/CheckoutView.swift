@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct CheckoutView: View {
-    @ObservedObject var order: Order
+    @ObservedObject var order: SharedOrder
     
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
+    
+    @State private var errorMessage = ""
+    @State private var showError = false
     
     var body: some View {
         ScrollView {
@@ -43,11 +46,16 @@ struct CheckoutView: View {
         } message: {
             Text(confirmationMessage)
         }
+        .alert("Oops!", isPresented: $showError) {
+            Button("OK") {}
+        } message: {
+            Text(errorMessage)
+        }
     }
     
     func placeOrder() async {
         
-        guard let encoded = try? JSONEncoder().encode(order) else {
+        guard let encoded = try? JSONEncoder().encode(order.data) else {
             print("Failed to encode order")
             return
         }
@@ -68,16 +76,17 @@ struct CheckoutView: View {
             print("Decoded Order Type: \(decodedOrder.type)")
             print("Decoded Order Type: \(decodedOrder.streetAddress)")
             
-            confirmationMessage = "Your order for \(decodedOrder.quantity)x\(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
+            confirmationMessage = "Your order for \(decodedOrder.quantity)x\(SharedOrder.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
             showingConfirmation = true
         } catch {
-            print("Checkout failed")
+            errorMessage = "Sorry. Checkout failed. \n\n Message: \(error.localizedDescription) "
+            showError = true
         }
     }
 }
 
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutView(order: Order())
+        CheckoutView(order: SharedOrder())
     }
 }
