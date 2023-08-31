@@ -69,8 +69,8 @@
 				E5E0B5402A9F99F500006F1B /* AddBookView.swift */,
 				E5E0B5472A9FA54500006F1B /* EmojiRatingView.swift */,
 				E5E0B5452A9F9FC600006F1B /* RatingView.swift */,
-				E5E0B5422A9F9CD200006F1B /* Bookworm.xcdatamodeld */,
 				E58147B42A9E73140021BB74 /* DataController.swift */,
+				E5E0B5422A9F9CD200006F1B /* Bookworm.xcdatamodeld */,
 				E58147A72A9E6FD10021BB74 /* Assets.xcassets */,
 				E58147A92A9E6FD10021BB74 /* Preview Content */,
 			);
