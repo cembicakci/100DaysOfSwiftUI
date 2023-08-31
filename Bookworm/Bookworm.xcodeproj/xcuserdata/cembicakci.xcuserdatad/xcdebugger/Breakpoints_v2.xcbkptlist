@@ -14,9 +14,9 @@
             filePath = "Bookworm/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "ContentView"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "ContentView_Previews"
             landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
