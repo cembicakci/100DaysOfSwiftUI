@@ -31,9 +31,18 @@ struct DetailView: View {
                     .offset(x: -5, y: -5)
             }
             
-            Text(book.author ?? "Unknown Author")
-                .font(.title)
-                .foregroundColor(.secondary)
+            HStack {
+                Text(book.author ?? "Unknown Author")
+                    .font(.title)
+                    .foregroundColor(.secondary)
+                
+                Spacer()
+                
+                Text(book.date?.formatted() ?? "No Date")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+            .padding(.horizontal)
             
             Text(book.review ?? "No Review")
                 .padding()
