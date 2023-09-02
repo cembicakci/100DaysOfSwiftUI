@@ -5,16 +5,17 @@
 //  Created by Cem Bıçakcı on 2.09.2023.
 //
 
-import CoreData
 import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    
+    @FetchRequest(sortDescriptors: []) var singers: FetchedResults<Singer>
+
     @State private var lastNameFilter = "A"
-    
+
     var body: some View {
         VStack {
+            FilteredList(filter: lastNameFilter)
             
             Button("Add Examples") {
                 let taylor = Singer(context: moc)
