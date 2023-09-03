@@ -19,4 +19,6 @@ struct User: Identifiable, Codable {
     let registered: Date
     let tags: [String]
     let friends: [Friend]
+    
+    static let example = User(id: UUID(), isActive: true, name: "Cem Bıçakcı", age: 27, company: "Codelisa", email: "cmbicakci@gmail.com", address: "İstanbul", about: "Learning swiftui", registered: Date.now, tags: ["swift", "swiftui"], friends: [])
 }
