@@ -11,6 +11,8 @@
 		E5A422942AA4939700E158F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422932AA4939700E158F4 /* ContentView.swift */; };
 		E5A422962AA4939900E158F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A422952AA4939900E158F4 /* Assets.xcassets */; };
 		E5A422992AA4939900E158F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A422982AA4939900E158F4 /* Preview Assets.xcassets */; };
+		E5A422A02AA493FF00E158F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4229F2AA493FF00E158F4 /* User.swift */; };
+		E5A422A22AA4949800E158F4 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422A12AA4949800E158F4 /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E5A422932AA4939700E158F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5A422952AA4939900E158F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5A422982AA4939900E158F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5A4229F2AA493FF00E158F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E5A422A12AA4949800E158F4 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				E5A422912AA4939700E158F4 /* FriendfaceApp.swift */,
 				E5A422932AA4939700E158F4 /* ContentView.swift */,
+				E5A4229F2AA493FF00E158F4 /* User.swift */,
+				E5A422A12AA4949800E158F4 /* Friend.swift */,
 				E5A422952AA4939900E158F4 /* Assets.xcassets */,
 				E5A422972AA4939900E158F4 /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				E5A422942AA4939700E158F4 /* ContentView.swift in Sources */,
 				E5A422922AA4939700E158F4 /* FriendfaceApp.swift in Sources */,
+				E5A422A02AA493FF00E158F4 /* User.swift in Sources */,
+				E5A422A22AA4949800E158F4 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
