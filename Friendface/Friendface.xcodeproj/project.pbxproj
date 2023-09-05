@@ -14,6 +14,12 @@
 		E5A422A02AA493FF00E158F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4229F2AA493FF00E158F4 /* User.swift */; };
 		E5A422A22AA4949800E158F4 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422A12AA4949800E158F4 /* Friend.swift */; };
 		E5A422A42AA497DB00E158F4 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422A32AA497DB00E158F4 /* UserView.swift */; };
+		E5A422A62AA7A9DE00E158F4 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422A52AA7A9DE00E158F4 /* DataController.swift */; };
+		E5A422A92AA7AA4600E158F4 /* Friendface.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5A422A72AA7AA4600E158F4 /* Friendface.xcdatamodeld */; };
+		E5A422AE2AA7AC0000E158F4 /* CachedFriend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422AA2AA7AC0000E158F4 /* CachedFriend+CoreDataClass.swift */; };
+		E5A422AF2AA7AC0000E158F4 /* CachedFriend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422AB2AA7AC0000E158F4 /* CachedFriend+CoreDataProperties.swift */; };
+		E5A422B02AA7AC0000E158F4 /* CachedUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422AC2AA7AC0000E158F4 /* CachedUser+CoreDataClass.swift */; };
+		E5A422B12AA7AC0000E158F4 /* CachedUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422AD2AA7AC0000E158F4 /* CachedUser+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		E5A4229F2AA493FF00E158F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E5A422A12AA4949800E158F4 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		E5A422A32AA497DB00E158F4 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		E5A422A52AA7A9DE00E158F4 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		E5A422A82AA7AA4600E158F4 /* Friendface.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Friendface.xcdatamodel; sourceTree = "<group>"; };
+		E5A422AA2AA7AC0000E158F4 /* CachedFriend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E5A422AB2AA7AC0000E158F4 /* CachedFriend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		E5A422AC2AA7AC0000E158F4 /* CachedUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E5A422AD2AA7AC0000E158F4 /* CachedUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +69,16 @@
 		E5A422902AA4939700E158F4 /* Friendface */ = {
 			isa = PBXGroup;
 			children = (
+				E5A422AA2AA7AC0000E158F4 /* CachedFriend+CoreDataClass.swift */,
+				E5A422AB2AA7AC0000E158F4 /* CachedFriend+CoreDataProperties.swift */,
+				E5A422AC2AA7AC0000E158F4 /* CachedUser+CoreDataClass.swift */,
+				E5A422AD2AA7AC0000E158F4 /* CachedUser+CoreDataProperties.swift */,
 				E5A422912AA4939700E158F4 /* FriendfaceApp.swift */,
 				E5A422932AA4939700E158F4 /* ContentView.swift */,
 				E5A422A32AA497DB00E158F4 /* UserView.swift */,
 				E5A4229F2AA493FF00E158F4 /* User.swift */,
+				E5A422A52AA7A9DE00E158F4 /* DataController.swift */,
+				E5A422A72AA7AA4600E158F4 /* Friendface.xcdatamodeld */,
 				E5A422A12AA4949800E158F4 /* Friend.swift */,
 				E5A422952AA4939900E158F4 /* Assets.xcassets */,
 				E5A422972AA4939900E158F4 /* Preview Content */,
@@ -147,9 +165,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A422942AA4939700E158F4 /* ContentView.swift in Sources */,
+				E5A422AF2AA7AC0000E158F4 /* CachedFriend+CoreDataProperties.swift in Sources */,
+				E5A422B12AA7AC0000E158F4 /* CachedUser+CoreDataProperties.swift in Sources */,
+				E5A422A62AA7A9DE00E158F4 /* DataController.swift in Sources */,
 				E5A422922AA4939700E158F4 /* FriendfaceApp.swift in Sources */,
 				E5A422A42AA497DB00E158F4 /* UserView.swift in Sources */,
 				E5A422A02AA493FF00E158F4 /* User.swift in Sources */,
+				E5A422B02AA7AC0000E158F4 /* CachedUser+CoreDataClass.swift in Sources */,
+				E5A422A92AA7AA4600E158F4 /* Friendface.xcdatamodeld in Sources */,
+				E5A422AE2AA7AC0000E158F4 /* CachedFriend+CoreDataClass.swift in Sources */,
 				E5A422A22AA4949800E158F4 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +373,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E5A422A72AA7AA4600E158F4 /* Friendface.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E5A422A82AA7AA4600E158F4 /* Friendface.xcdatamodel */,
+			);
+			currentVersion = E5A422A82AA7AA4600E158F4 /* Friendface.xcdatamodel */;
+			path = Friendface.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E5A422862AA4939700E158F4 /* Project object */;
 }
