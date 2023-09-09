@@ -5,43 +5,43 @@
 //  Created by Cem Bıçakcı on 9.09.2023.
 //
 
+import CoreImage
+import CoreImage.CIFilterBuiltins
 import SwiftUI
 
 struct ContentView: View {
-    @State private var blurAmount = 0.0
-    
-    @State private var showingConfirmation = false
-    @State private var backgroundColor = Color.white
+    @State private var image: Image?
     
     var body: some View {
         VStack {
-            Text("Blur")
-                .blur(radius: blurAmount)
-            
-            Slider(value: $blurAmount, in: 0...20)
-            
-            Button("Random Blur") {
-                blurAmount = Double.random(in: 0...20)
-            }
-            
-            Text("Show Dialog")
-              .frame(width: 300, height: 300)
-              .background(backgroundColor)
-              .onTapGesture {
-                  showingConfirmation = true
-              }
+            image?
+                .resizable()
+                .scaledToFit()
         }
-        .onChange(of: blurAmount) { newValue in
-            print("New Value is \(newValue)")
+        .onAppear(perform: loadImage)
+    }
+    
+    func loadImage(){
+        guard let inputImage = UIImage(named: "image") else { return }
+        let beginImage = CIImage(image: inputImage)
+        
+        let context = CIContext()
+        let currentFilter = CIFilter.sepiaTone()
+        currentFilter.inputImage = beginImage
+        currentFilter.intensity = 1
+
+        // get a CIImage from our filter or exit if that fails
+        guard let outputImage = currentFilter.outputImage else { return }
+
+        // attempt to get a CGImage from our CIImage
+        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+            // convert that to a UIImage
+            let uiImage = UIImage(cgImage: cgimg)
+
+            // and convert that to a SwiftUI image
+            image = Image(uiImage: uiImage)
         }
-        .confirmationDialog("Change background", isPresented: $showingConfirmation) {
-            Button("Red") { backgroundColor = .red }
-            Button("Green") { backgroundColor = .green }
-            Button("Blue") { backgroundColor = .blue }
-            Button("Cancel", role: .cancel) { }
-        } message: {
-            Text("Select a new color")
-        }
+        
     }
 }
 
