@@ -5,44 +5,28 @@
 //  Created by Cem Bıçakcı on 9.09.2023.
 //
 
-import CoreImage
-import CoreImage.CIFilterBuiltins
 import SwiftUI
 
 struct ContentView: View {
     @State private var image: Image?
+    @State private var showingImagePicker = false
     
     var body: some View {
         VStack {
             image?
                 .resizable()
                 .scaledToFit()
+            
+            Button("Select Image") {
+                showingImagePicker = true
+            }
+            
+            .sheet(isPresented: $showingImagePicker) {
+                ImagePicker()
+            }
         }
-        .onAppear(perform: loadImage)
     }
-    
-    func loadImage(){
-        guard let inputImage = UIImage(named: "image") else { return }
-        let beginImage = CIImage(image: inputImage)
-        
-        let context = CIContext()
-        let currentFilter = CIFilter.sepiaTone()
-        currentFilter.inputImage = beginImage
-        currentFilter.intensity = 1
 
-        // get a CIImage from our filter or exit if that fails
-        guard let outputImage = currentFilter.outputImage else { return }
-
-        // attempt to get a CGImage from our CIImage
-        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
-            // convert that to a UIImage
-            let uiImage = UIImage(cgImage: cgimg)
-
-            // and convert that to a SwiftUI image
-            image = Image(uiImage: uiImage)
-        }
-        
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

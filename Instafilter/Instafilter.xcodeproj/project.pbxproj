@@ -11,6 +11,7 @@
 		E5A422DB2AAC5C4200E158F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422DA2AAC5C4200E158F4 /* ContentView.swift */; };
 		E5A422DD2AAC5C4400E158F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A422DC2AAC5C4400E158F4 /* Assets.xcassets */; };
 		E5A422E02AAC5C4400E158F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A422DF2AAC5C4400E158F4 /* Preview Assets.xcassets */; };
+		E5A422E72AAC6EF200E158F4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A422E62AAC6EF200E158F4 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E5A422DA2AAC5C4200E158F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5A422DC2AAC5C4400E158F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5A422DF2AAC5C4400E158F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5A422E62AAC6EF200E158F4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E5A422D82AAC5C4200E158F4 /* InstafilterApp.swift */,
 				E5A422DA2AAC5C4200E158F4 /* ContentView.swift */,
+				E5A422E62AAC6EF200E158F4 /* ImagePicker.swift */,
 				E5A422DC2AAC5C4400E158F4 /* Assets.xcassets */,
 				E5A422DE2AAC5C4400E158F4 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5A422E72AAC6EF200E158F4 /* ImagePicker.swift in Sources */,
 				E5A422DB2AAC5C4200E158F4 /* ContentView.swift in Sources */,
 				E5A422D92AAC5C4200E158F4 /* InstafilterApp.swift in Sources */,
 			);
