@@ -9,42 +9,67 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var image: Image?
-    @State private var inputImage: UIImage?
+    @State private var filterIntensity = 0.5
+    
     @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
     
     var body: some View {
-        VStack {
-            image?
-                .resizable()
-                .scaledToFit()
-            
-            Button("Select Image") {
-                showingImagePicker = true
+        NavigationView {
+            VStack {
+                ZStack {
+                    Rectangle()
+                        .fill(.secondary)
+                    
+                    Text("Tap to select a picture")
+                        .foregroundColor(.white)
+                        .font(.headline)
+                    
+                    image?
+                        .resizable()
+                        .scaledToFit()
+                }
+                .onTapGesture {
+                    showingImagePicker = true
+                }
+                
+                HStack {
+                    Text("Intensity")
+                    Slider(value: $filterIntensity)
+                }
+                .padding(.vertical)
+                
+                HStack {
+                    Button("Change Filter") {
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    Button("Save") {
+                        save()
+                    }
+                }
             }
-            
-            Button("Save Image") {
-                guard let inputImage = inputImage else { return }
-
-                let imageSaver = ImageSaver()
-                imageSaver.writeToPhotoAlbum(image: inputImage)
-            }
-            
-            .sheet(isPresented: $showingImagePicker) {
-                ImagePicker(image: $inputImage)
-            }
+            .padding([.horizontal, .bottom])
+            .navigationTitle("Instafilter")
             .onChange(of: inputImage) { _ in
                 loadImage()
+            }
+            .sheet(isPresented: $showingImagePicker) {
+                ImagePicker(image: $inputImage)
             }
         }
     }
     
-    func loadImage(){
+    func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
-        
-        UIImageWriteToSavedPhotosAlbum(inputImage, nil, nil, nil)
     }
 
+    func save() {
+        
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
