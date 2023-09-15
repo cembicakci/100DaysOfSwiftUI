@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  new
+//  BucketList
 //
-//  Created by Cem Bıçakcı on 14.09.2023.
+//  Created by Cem Bıçakcı on 15.09.2023.
 //
 
 import SwiftUI
