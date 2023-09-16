@@ -12,6 +12,7 @@
 		E5A423242AB4C86100E158F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A423232AB4C86100E158F4 /* Assets.xcassets */; };
 		E5A423272AB4C86100E158F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A423262AB4C86100E158F4 /* Preview Assets.xcassets */; };
 		E5A4232E2AB59AF900E158F4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4232D2AB59AF900E158F4 /* Location.swift */; };
+		E5A423302AB5A93800E158F4 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4232F2AB5A93800E158F4 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		E5A423232AB4C86100E158F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5A423262AB4C86100E158F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5A4232D2AB59AF900E158F4 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		E5A4232F2AB5A93800E158F4 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E5A423212AB4C85F00E158F4 /* ContentView.swift */,
 				E5A4232D2AB59AF900E158F4 /* Location.swift */,
 				E5A423232AB4C86100E158F4 /* Assets.xcassets */,
+				E5A4232F2AB5A93800E158F4 /* EditView.swift */,
 				E5A423252AB4C86100E158F4 /* Preview Content */,
 			);
 			path = BucketList;
@@ -142,6 +145,7 @@
 			files = (
 				E5A423222AB4C85F00E158F4 /* ContentView.swift in Sources */,
 				E5A4232E2AB59AF900E158F4 /* Location.swift in Sources */,
+				E5A423302AB5A93800E158F4 /* EditView.swift in Sources */,
 				E5A423202AB4C85F00E158F4 /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
