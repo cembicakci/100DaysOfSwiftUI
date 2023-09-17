@@ -15,6 +15,7 @@
 		E5A423302AB5A93800E158F4 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4232F2AB5A93800E158F4 /* EditView.swift */; };
 		E5A423322AB6F53D00E158F4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A423312AB6F53D00E158F4 /* Result.swift */; };
 		E5A423342AB7009F00E158F4 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A423332AB7009F00E158F4 /* ContentView-ViewModel.swift */; };
+		E5A423362AB7058B00E158F4 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A423352AB7058B00E158F4 /* FileManager-DocumentsDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E5A4232F2AB5A93800E158F4 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		E5A423312AB6F53D00E158F4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E5A423332AB7009F00E158F4 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		E5A423352AB7058B00E158F4 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				E5A4231F2AB4C85F00E158F4 /* BucketListApp.swift */,
 				E5A423212AB4C85F00E158F4 /* ContentView.swift */,
+				E5A423352AB7058B00E158F4 /* FileManager-DocumentsDirectory.swift */,
 				E5A423312AB6F53D00E158F4 /* Result.swift */,
 				E5A4232D2AB59AF900E158F4 /* Location.swift */,
 				E5A423232AB4C86100E158F4 /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A423222AB4C85F00E158F4 /* ContentView.swift in Sources */,
+				E5A423362AB7058B00E158F4 /* FileManager-DocumentsDirectory.swift in Sources */,
 				E5A423342AB7009F00E158F4 /* ContentView-ViewModel.swift in Sources */,
 				E5A423322AB6F53D00E158F4 /* Result.swift in Sources */,
 				E5A4232E2AB59AF900E158F4 /* Location.swift in Sources */,
