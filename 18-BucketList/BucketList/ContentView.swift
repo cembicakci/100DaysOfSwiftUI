@@ -49,13 +49,14 @@ struct ContentView: View {
                             
                         } label: {
                             Image(systemName: "plus")
+                                .padding(20)
+                                .background(.black.opacity(0.75))
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .clipShape(Circle())
+                                .padding()
                         }
-                        .padding(20)
-                        .background(.black.opacity(0.75))
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .clipShape(Circle())
-                        .padding()
+                    
                     }
                 }
             }
@@ -74,6 +75,11 @@ struct ContentView: View {
             .background(.blue)
             .foregroundColor(.white)
             .clipShape(Capsule())
+            .alert("Authentication error", isPresented: $viewModel.isShowingAuthenticationError) {
+                Button("OK") { }
+            } message: {
+                Text(viewModel.authenticationError)
+            }
         }
 
     }
