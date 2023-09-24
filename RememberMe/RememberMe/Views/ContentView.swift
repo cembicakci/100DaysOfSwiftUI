@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAddView = false
+    
     var body: some View {
         NavigationView {
             Text("Hello")
                 .navigationTitle("Remember Me")
+                .sheet(isPresented: $showAddView) {
+                    AddPersonView()
+                }
                 .toolbar {
                     Button {
-                        
+                        showAddView = true
                     } label: {
                         Image(systemName: "plus")
                     }

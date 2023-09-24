@@ -11,6 +11,9 @@
 		E5F3D59D2AC02A400013F3F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D59C2AC02A400013F3F8 /* ContentView.swift */; };
 		E5F3D59F2AC02A410013F3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F3D59E2AC02A410013F3F8 /* Assets.xcassets */; };
 		E5F3D5A22AC02A410013F3F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F3D5A12AC02A410013F3F8 /* Preview Assets.xcassets */; };
+		E5F3D5AA2AC02D060013F3F8 /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5A92AC02D060013F3F8 /* AddPersonView.swift */; };
+		E5F3D5AD2AC02E1C0013F3F8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5AC2AC02E1C0013F3F8 /* Person.swift */; };
+		E5F3D5AF2AC02FD60013F3F8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5AE2AC02FD60013F3F8 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		E5F3D59C2AC02A400013F3F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5F3D59E2AC02A410013F3F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5F3D5A12AC02A410013F3F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5F3D5A92AC02D060013F3F8 /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
+		E5F3D5AC2AC02E1C0013F3F8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E5F3D5AE2AC02FD60013F3F8 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,10 @@
 		E5F3D5992AC02A400013F3F8 /* RememberMe */ = {
 			isa = PBXGroup;
 			children = (
+				E5F3D5AB2AC02E0D0013F3F8 /* Models */,
 				E5F3D5A82AC02A960013F3F8 /* Views */,
 				E5F3D59A2AC02A400013F3F8 /* RememberMeApp.swift */,
+				E5F3D5AE2AC02FD60013F3F8 /* ImagePicker.swift */,
 				E5F3D59E2AC02A410013F3F8 /* Assets.xcassets */,
 				E5F3D5A02AC02A410013F3F8 /* Preview Content */,
 			);
@@ -71,8 +79,17 @@
 			isa = PBXGroup;
 			children = (
 				E5F3D59C2AC02A400013F3F8 /* ContentView.swift */,
+				E5F3D5A92AC02D060013F3F8 /* AddPersonView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E5F3D5AB2AC02E0D0013F3F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E5F3D5AC2AC02E1C0013F3F8 /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +164,9 @@
 			files = (
 				E5F3D59D2AC02A400013F3F8 /* ContentView.swift in Sources */,
 				E5F3D59B2AC02A400013F3F8 /* RememberMeApp.swift in Sources */,
+				E5F3D5AF2AC02FD60013F3F8 /* ImagePicker.swift in Sources */,
+				E5F3D5AD2AC02E1C0013F3F8 /* Person.swift in Sources */,
+				E5F3D5AA2AC02D060013F3F8 /* AddPersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
