@@ -43,10 +43,25 @@ struct AddPersonView: View {
                 .onChange(of: inputImage) { newValue in
                     setImage(uiImage: newValue)
                 }
+                
+                
+                Section("Name") {
+                    TextField("Enter Name", text: $name)
+                }
+                
             }
             .sheet(isPresented: $showImagePicker) {
                 ImagePicker(image: $inputImage)
             }
+            
+            .toolbar {
+                Button {
+                    
+                } label: {
+                    Text("Save")
+                }
+            }
+            
             .navigationTitle("Add Picture")
             .navigationBarTitleDisplayMode(.inline)
         }

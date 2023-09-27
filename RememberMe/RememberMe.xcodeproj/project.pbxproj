@@ -14,6 +14,8 @@
 		E5F3D5AA2AC02D060013F3F8 /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5A92AC02D060013F3F8 /* AddPersonView.swift */; };
 		E5F3D5AD2AC02E1C0013F3F8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5AC2AC02E1C0013F3F8 /* Person.swift */; };
 		E5F3D5AF2AC02FD60013F3F8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5AE2AC02FD60013F3F8 /* ImagePicker.swift */; };
+		E5F3D5B22AC404C00013F3F8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5B12AC404C00013F3F8 /* ViewModel.swift */; };
+		E5F3D5B42AC405890013F3F8 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5B32AC405890013F3F8 /* FileManager-DocumentsDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		E5F3D5A92AC02D060013F3F8 /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
 		E5F3D5AC2AC02E1C0013F3F8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E5F3D5AE2AC02FD60013F3F8 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E5F3D5B12AC404C00013F3F8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E5F3D5B32AC405890013F3F8 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,11 @@
 		E5F3D5992AC02A400013F3F8 /* RememberMe */ = {
 			isa = PBXGroup;
 			children = (
+				E5F3D5B02AC404B20013F3F8 /* ViewModel */,
 				E5F3D5AB2AC02E0D0013F3F8 /* Models */,
 				E5F3D5A82AC02A960013F3F8 /* Views */,
 				E5F3D59A2AC02A400013F3F8 /* RememberMeApp.swift */,
+				E5F3D5B32AC405890013F3F8 /* FileManager-DocumentsDirectory.swift */,
 				E5F3D5AE2AC02FD60013F3F8 /* ImagePicker.swift */,
 				E5F3D59E2AC02A410013F3F8 /* Assets.xcassets */,
 				E5F3D5A02AC02A410013F3F8 /* Preview Content */,
@@ -90,6 +96,14 @@
 				E5F3D5AC2AC02E1C0013F3F8 /* Person.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E5F3D5B02AC404B20013F3F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E5F3D5B12AC404C00013F3F8 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F3D59D2AC02A400013F3F8 /* ContentView.swift in Sources */,
+				E5F3D5B42AC405890013F3F8 /* FileManager-DocumentsDirectory.swift in Sources */,
 				E5F3D59B2AC02A400013F3F8 /* RememberMeApp.swift in Sources */,
 				E5F3D5AF2AC02FD60013F3F8 /* ImagePicker.swift in Sources */,
 				E5F3D5AD2AC02E1C0013F3F8 /* Person.swift in Sources */,
+				E5F3D5B22AC404C00013F3F8 /* ViewModel.swift in Sources */,
 				E5F3D5AA2AC02D060013F3F8 /* AddPersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
