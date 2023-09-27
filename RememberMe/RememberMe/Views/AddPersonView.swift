@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AddPersonView: View {
     @Environment(\.dismiss) var dismiss
+       
+    @EnvironmentObject var viewModel: ViewModel
     
     @State private var name = ""
     @State private var image: Image?
@@ -24,12 +26,12 @@ struct AddPersonView: View {
                         image?
                             .resizable()
                             .scaledToFit()
-                            .frame(width: .infinity, height: 250)
+                            .frame(width: 300, height: 250)
                     } else {
                         ZStack {
                             RoundedRectangle(cornerRadius: 15)
                                 .stroke(Color.blue, style: .init(lineWidth: 2, lineCap: .round, dash: [5, 5]))
-                                .frame(width: .infinity, height: 250)
+                                .frame(width: 300, height: 250)
                             
                             Text("Tap to select an image")
                                 .foregroundColor(.blue)
@@ -56,6 +58,14 @@ struct AddPersonView: View {
             
             .toolbar {
                 Button {
+                    
+                    guard let inputImage = inputImage else { return }
+                    guard let jpegData = inputImage.jpegData(compressionQuality: 0.8) else { return }
+                    
+                    let person = Person(name: name, imageData: jpegData)
+                    print(person)
+                    viewModel.addPerson(person)
+                    dismiss()
                     
                 } label: {
                     Text("Save")

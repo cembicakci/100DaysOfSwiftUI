@@ -8,22 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ViewModel()
+    
     @State private var showAddView = false
     
     var body: some View {
         NavigationView {
-            Text("Hello")
-                .navigationTitle("Remember Me")
-                .sheet(isPresented: $showAddView) {
-                    AddPersonView()
-                }
-                .toolbar {
-                    Button {
-                        showAddView = true
+            List {
+                ForEach(viewModel.people) { item in
+                    NavigationLink {
+                        Text(item.name)
                     } label: {
-                        Image(systemName: "plus")
+                        HStack {
+                            item.image?
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 44, height: 44)
+                            Text(item.name)
+                        }
                     }
                 }
+            }
+            .navigationTitle("Remember Me")
+            .sheet(isPresented: $showAddView) {
+                AddPersonView()
+                    .environmentObject(viewModel)
+            }
+            .toolbar {
+                Button {
+                    showAddView = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
         }
     }
 }
