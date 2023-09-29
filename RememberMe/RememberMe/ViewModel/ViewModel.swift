@@ -26,5 +26,20 @@ class ViewModel: ObservableObject {
        
     func addPerson(_ person: Person) {
         people.append(person)
+        savePerson()
+    }
+    
+    func savePerson() {
+        do {
+            let data = try JSONEncoder().encode(people)
+            try data.write(to: savePath, options: [.atomic, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
+        }
+    }
+    
+    func removePerson(at offsets: IndexSet) {
+        people.remove(atOffsets: offsets)
+        savePerson()
     }
 }

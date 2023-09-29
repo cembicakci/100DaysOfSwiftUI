@@ -16,6 +16,7 @@
 		E5F3D5AF2AC02FD60013F3F8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5AE2AC02FD60013F3F8 /* ImagePicker.swift */; };
 		E5F3D5B22AC404C00013F3F8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5B12AC404C00013F3F8 /* ViewModel.swift */; };
 		E5F3D5B42AC405890013F3F8 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5B32AC405890013F3F8 /* FileManager-DocumentsDirectory.swift */; };
+		E5F3D5B62AC745650013F3F8 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5B52AC745650013F3F8 /* LocationFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E5F3D5AE2AC02FD60013F3F8 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E5F3D5B12AC404C00013F3F8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E5F3D5B32AC405890013F3F8 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+		E5F3D5B52AC745650013F3F8 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E5F3D5A82AC02A960013F3F8 /* Views */,
 				E5F3D59A2AC02A400013F3F8 /* RememberMeApp.swift */,
 				E5F3D5B32AC405890013F3F8 /* FileManager-DocumentsDirectory.swift */,
+				E5F3D5B52AC745650013F3F8 /* LocationFetcher.swift */,
 				E5F3D5AE2AC02FD60013F3F8 /* ImagePicker.swift */,
 				E5F3D59E2AC02A410013F3F8 /* Assets.xcassets */,
 				E5F3D5A02AC02A410013F3F8 /* Preview Content */,
@@ -178,6 +181,7 @@
 			files = (
 				E5F3D59D2AC02A400013F3F8 /* ContentView.swift in Sources */,
 				E5F3D5B42AC405890013F3F8 /* FileManager-DocumentsDirectory.swift in Sources */,
+				E5F3D5B62AC745650013F3F8 /* LocationFetcher.swift in Sources */,
 				E5F3D59B2AC02A400013F3F8 /* RememberMeApp.swift in Sources */,
 				E5F3D5AF2AC02FD60013F3F8 /* ImagePicker.swift in Sources */,
 				E5F3D5AD2AC02E1C0013F3F8 /* Person.swift in Sources */,
