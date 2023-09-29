@@ -28,6 +28,7 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete(perform: viewModel.removePerson)
             }
             .navigationTitle("Remember Me")
             .sheet(isPresented: $showAddView) {
