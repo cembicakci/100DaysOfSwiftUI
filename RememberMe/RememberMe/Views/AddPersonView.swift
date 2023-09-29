@@ -5,6 +5,7 @@
 //  Created by Cem Bıçakcı on 24.09.2023.
 //
 
+import CoreLocation
 import SwiftUI
 
 struct AddPersonView: View {
@@ -15,8 +16,14 @@ struct AddPersonView: View {
     @State private var name = ""
     @State private var image: Image?
     @State private var inputImage: UIImage?
+    @State private var location: CLLocationCoordinate2D?
     
     @State private var showImagePicker = false
+    
+    @State private var locationToggle = false
+    @State private var confirmAlert = false
+    
+    let locationFetcher = LocationFetcher()
     
     var body: some View {
         NavigationView {
@@ -51,6 +58,28 @@ struct AddPersonView: View {
                     TextField("Enter Name", text: $name)
                 }
                 
+                Section("Location") {
+                    Toggle("Save Location?", isOn: $locationToggle)
+                        .onChange(of: locationToggle) { newValue in
+                            if newValue == true { locationFetcher.start() }
+                            else { location = nil }
+                        }
+                    
+                    if locationToggle {
+                        Button {
+                            location = locationFetcher.lastKnownLocation
+                            confirmAlert = true
+                        } label: {
+                             Label("Share My Current Location", systemImage: "location")
+                        }
+                    }
+                }
+                
+            }
+            .alert("Lcoation Saved", isPresented: $confirmAlert) {
+                Button("OK") {}
+            } message: {
+                Text("Your current location will be saved.")
             }
             .sheet(isPresented: $showImagePicker) {
                 ImagePicker(image: $inputImage)
@@ -62,7 +91,7 @@ struct AddPersonView: View {
                     guard let inputImage = inputImage else { return }
                     guard let jpegData = inputImage.jpegData(compressionQuality: 0.8) else { return }
                     
-                    let person = Person(name: name, imageData: jpegData)
+                    let person = Person(name: name, imageData: jpegData, latitude: location?.latitude, longitude: location?.longitude)
                     print(person)
                     viewModel.addPerson(person)
                     dismiss()

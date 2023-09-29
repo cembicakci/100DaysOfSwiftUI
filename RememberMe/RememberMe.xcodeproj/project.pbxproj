@@ -17,6 +17,7 @@
 		E5F3D5B22AC404C00013F3F8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5B12AC404C00013F3F8 /* ViewModel.swift */; };
 		E5F3D5B42AC405890013F3F8 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5B32AC405890013F3F8 /* FileManager-DocumentsDirectory.swift */; };
 		E5F3D5B62AC745650013F3F8 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5B52AC745650013F3F8 /* LocationFetcher.swift */; };
+		E5F3D5B82AC7484E0013F3F8 /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5B72AC7484E0013F3F8 /* PersonDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E5F3D5B12AC404C00013F3F8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E5F3D5B32AC405890013F3F8 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		E5F3D5B52AC745650013F3F8 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		E5F3D5B72AC7484E0013F3F8 /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				E5F3D59C2AC02A400013F3F8 /* ContentView.swift */,
 				E5F3D5A92AC02D060013F3F8 /* AddPersonView.swift */,
+				E5F3D5B72AC7484E0013F3F8 /* PersonDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				E5F3D5B42AC405890013F3F8 /* FileManager-DocumentsDirectory.swift in Sources */,
 				E5F3D5B62AC745650013F3F8 /* LocationFetcher.swift in Sources */,
 				E5F3D59B2AC02A400013F3F8 /* RememberMeApp.swift in Sources */,
+				E5F3D5B82AC7484E0013F3F8 /* PersonDetailView.swift in Sources */,
 				E5F3D5AF2AC02FD60013F3F8 /* ImagePicker.swift in Sources */,
 				E5F3D5AD2AC02E1C0013F3F8 /* Person.swift in Sources */,
 				E5F3D5B22AC404C00013F3F8 /* ViewModel.swift in Sources */,
@@ -317,6 +321,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RememberMe/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your current location will be saved.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -345,6 +350,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RememberMe/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your current location will be saved.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

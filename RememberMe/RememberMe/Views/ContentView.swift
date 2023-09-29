@@ -17,7 +17,7 @@ struct ContentView: View {
             List {
                 ForEach(viewModel.people) { item in
                     NavigationLink {
-                        Text(item.name)
+                        PersonDetailView(person: item)
                     } label: {
                         HStack {
                             item.image?
