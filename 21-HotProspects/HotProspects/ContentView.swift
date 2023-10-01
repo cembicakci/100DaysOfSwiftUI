@@ -7,46 +7,48 @@
 
 import SwiftUI
 
-@MainActor class User: ObservableObject {
-    @Published var name = "Cem Bıçakcı"
-}
-
-struct EditView: View {
-    @EnvironmentObject var user: User
+@MainActor class DeleteUpdate: ObservableObject {
+    @Published var value = 0
     
-    var body: some View {
-        TextField("Name", text: $user.name)
-    }
-}
-
-struct DisplayView: View {
-    @EnvironmentObject var user: User
-    var body: some View {
-        Text(user.name)
+    init() {
+        for i in 1...10 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
+                self.value += 1
+            }
+        }
     }
 }
 
 struct ContentView: View {
-    @StateObject private var user = User()
-    @State private var selectedTab = "One"
+    @StateObject private var updater = DeleteUpdate()
+    
+    @State private var output = ""
     
     var body: some View {
-            TabView(selection: $selectedTab) {
-                EditView()
-                    .onTapGesture {
-                        selectedTab = "Two"
-                    }
-                    .tabItem {
-                        Label("One", systemImage: "star")
-                    }
-                    .tag("One")
-                DisplayView()
-                    .tabItem {
-                        Label("Two", systemImage: "star")
-                    }
-                    .tag("Two")
+        Text("Value is \(updater.value)")
+        
+        Text(output)
+            .task {
+                await fetchReadings()
             }
-            .environmentObject(user)
+    }
+    
+    func fetchReadings() async {
+        let fetchTask = Task { () -> String in
+            let url = URL(string: "https://hws.dev/readings.json")!
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let reading = try JSONDecoder().decode([Double].self, from: data)
+            return "Found \(reading.count) reading."
+        }
+        
+        let result = await fetchTask.result
+        
+        switch result {
+        case .success(let str):
+            output = str
+        case .failure(let error):
+            output = "Error: \(error.localizedDescription)"
+        }
     }
 }
 
