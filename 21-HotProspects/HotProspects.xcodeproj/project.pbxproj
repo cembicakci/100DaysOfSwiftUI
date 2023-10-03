@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E5DF139E2ACC7CB30093A2A9 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF139D2ACC7CB30093A2A9 /* ProspectsView.swift */; };
 		E5DF13A02ACC7CBD0093A2A9 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF139F2ACC7CBD0093A2A9 /* MeView.swift */; };
+		E5DF13A22ACC7F710093A2A9 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF13A12ACC7F710093A2A9 /* Prospect.swift */; };
 		E5F3D5C62AC80EEE0013F3F8 /* HotProspectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5C52AC80EEE0013F3F8 /* HotProspectsApp.swift */; };
 		E5F3D5C82AC80EEE0013F3F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5C72AC80EEE0013F3F8 /* ContentView.swift */; };
 		E5F3D5CA2AC80EF00013F3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F3D5C92AC80EF00013F3F8 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		E5DF139D2ACC7CB30093A2A9 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
 		E5DF139F2ACC7CBD0093A2A9 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		E5DF13A12ACC7F710093A2A9 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		E5F3D5C22AC80EEE0013F3F8 /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F3D5C52AC80EEE0013F3F8 /* HotProspectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProspectsApp.swift; sourceTree = "<group>"; };
 		E5F3D5C72AC80EEE0013F3F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				E5F3D5C72AC80EEE0013F3F8 /* ContentView.swift */,
 				E5DF139D2ACC7CB30093A2A9 /* ProspectsView.swift */,
 				E5DF139F2ACC7CBD0093A2A9 /* MeView.swift */,
+				E5DF13A12ACC7F710093A2A9 /* Prospect.swift */,
 				E5F3D5C92AC80EF00013F3F8 /* Assets.xcassets */,
 				E5F3D5CB2AC80EF00013F3F8 /* Preview Content */,
 			);
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5DF13A02ACC7CBD0093A2A9 /* MeView.swift in Sources */,
+				E5DF13A22ACC7F710093A2A9 /* Prospect.swift in Sources */,
 				E5DF139E2ACC7CB30093A2A9 /* ProspectsView.swift in Sources */,
 				E5F3D5C82AC80EEE0013F3F8 /* ContentView.swift in Sources */,
 				E5F3D5C62AC80EEE0013F3F8 /* HotProspectsApp.swift in Sources */,
