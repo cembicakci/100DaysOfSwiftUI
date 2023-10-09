@@ -15,6 +15,7 @@
 		E5F3D5C82AC80EEE0013F3F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3D5C72AC80EEE0013F3F8 /* ContentView.swift */; };
 		E5F3D5CA2AC80EF00013F3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F3D5C92AC80EF00013F3F8 /* Assets.xcassets */; };
 		E5F3D5CD2AC80EF00013F3F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F3D5CC2AC80EF00013F3F8 /* Preview Assets.xcassets */; };
+		E5F4689D2AD473B100536AC2 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F4689C2AD473B100536AC2 /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E5F3D5C72AC80EEE0013F3F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5F3D5C92AC80EF00013F3F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5F3D5CC2AC80EF00013F3F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5F4689C2AD473B100536AC2 /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E5F3D5C72AC80EEE0013F3F8 /* ContentView.swift */,
 				E5DF139D2ACC7CB30093A2A9 /* ProspectsView.swift */,
 				E5DF139F2ACC7CBD0093A2A9 /* MeView.swift */,
+				E5F4689C2AD473B100536AC2 /* ImageSaver.swift */,
 				E5DF13A12ACC7F710093A2A9 /* Prospect.swift */,
 				E5F3D5C92AC80EF00013F3F8 /* Assets.xcassets */,
 				E5F3D5CB2AC80EF00013F3F8 /* Preview Content */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5DF13A02ACC7CBD0093A2A9 /* MeView.swift in Sources */,
+				E5F4689D2AD473B100536AC2 /* ImageSaver.swift in Sources */,
 				E5DF13A22ACC7F710093A2A9 /* Prospect.swift in Sources */,
 				E5DF139E2ACC7CB30093A2A9 /* ProspectsView.swift in Sources */,
 				E5F3D5C82AC80EEE0013F3F8 /* ContentView.swift in Sources */,
@@ -290,6 +294,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "we want to save your qr code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +324,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "we want to save your qr code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
