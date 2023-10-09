@@ -28,6 +28,7 @@
 		E5F3D5C92AC80EF00013F3F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5F3D5CC2AC80EF00013F3F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5F4689C2AD473B100536AC2 /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		E5F4689E2AD4790400536AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		E5F3D5C42AC80EEE0013F3F8 /* HotProspects */ = {
 			isa = PBXGroup;
 			children = (
+				E5F4689E2AD4790400536AC2 /* Info.plist */,
 				E5F3D5C52AC80EEE0013F3F8 /* HotProspectsApp.swift */,
 				E5F3D5C72AC80EEE0013F3F8 /* ContentView.swift */,
 				E5DF139D2ACC7CB30093A2A9 /* ProspectsView.swift */,
@@ -293,6 +295,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HotProspects/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HotProspects/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "we want to save your qr code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -323,6 +326,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HotProspects/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HotProspects/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "we want to save your qr code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
