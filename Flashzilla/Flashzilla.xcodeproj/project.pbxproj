@@ -13,6 +13,7 @@
 		E5F468B32AD67CA900536AC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F468B22AD67CA900536AC2 /* Preview Assets.xcassets */; };
 		E5F468BA2AD6F7E200536AC2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F468B92AD6F7E200536AC2 /* Card.swift */; };
 		E5F468BC2AD6F8D000536AC2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F468BB2AD6F8D000536AC2 /* CardView.swift */; };
+		E5F468BE2AD70C4100536AC2 /* EditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F468BD2AD70C4100536AC2 /* EditCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		E5F468B22AD67CA900536AC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5F468B92AD6F7E200536AC2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E5F468BB2AD6F8D000536AC2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E5F468BD2AD70C4100536AC2 /* EditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E5F468AD2AD67CA700536AC2 /* ContentView.swift */,
 				E5F468B92AD6F7E200536AC2 /* Card.swift */,
 				E5F468BB2AD6F8D000536AC2 /* CardView.swift */,
+				E5F468BD2AD70C4100536AC2 /* EditCard.swift */,
 				E5F468AF2AD67CA900536AC2 /* Assets.xcassets */,
 				E5F468B12AD67CA900536AC2 /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 			files = (
 				E5F468AE2AD67CA700536AC2 /* ContentView.swift in Sources */,
 				E5F468BA2AD6F7E200536AC2 /* Card.swift in Sources */,
+				E5F468BE2AD70C4100536AC2 /* EditCard.swift in Sources */,
 				E5F468BC2AD6F8D000536AC2 /* CardView.swift in Sources */,
 				E5F468AC2AD67CA700536AC2 /* FlashzillaApp.swift in Sources */,
 			);
